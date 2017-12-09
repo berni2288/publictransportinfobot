@@ -1,0 +1,37 @@
+{  
+   "responseId":"00000000-0000-0000-0000-000000000000",
+   "queryResult":{  
+      "queryText":"Wann geht mein Bus?",
+      "action":"next_transport",
+      "parameters":{  
+         "start":"Johann-Kutschera-Gasse",
+         "TransportType":"bus",
+         "ziel":"Museumsquartier"
+      },
+      "allRequiredParamsPresent":true,
+      "fulfillmentMessages":[  
+         {  
+            "text":{  
+               "text":[  
+                  ""
+               ]
+            }
+         }
+      ],
+      "intent":{  
+         "name":"projects/wannkommtmeinoeffi/agent/intents/00000000-0000-0000-0000-000000000000",
+         "displayName":"NextTransportQuestion"
+      },
+      "intentDetectionConfidence":0.93,
+      "diagnosticInfo":{  
+
+      },
+      "languageCode":"de"
+   },
+   "originalDetectIntentRequest":{  
+      "payload":{  
+
+      }
+   },
+   "session":"projects/wannkommtmeinoeffi/agent/sessions/00000000-0000-0000-0000-000000000000"
+}

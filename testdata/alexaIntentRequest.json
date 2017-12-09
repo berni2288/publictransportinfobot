@@ -1,0 +1,45 @@
+{
+  "session": {
+    "new": true,
+    "sessionId": "SessionId.00000000-0000-0000-0000-000000000000",
+    "application": {
+      "applicationId": "amzn1.ask.skill.00000000-0000-0000-0000-000000000000"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.000000000"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.00000000-0000-0000-0000-000000000000",
+    "intent": {
+      "name": "Nexttransportquestion",
+      "slots": {
+        "transporttypeslot": {
+          "name": "transporttypeslot",
+          "value": "bus"
+        }
+      }
+    },
+    "locale": "de-DE",
+    "timestamp": "2017-12-09T12:13:24Z"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.00000000-0000-0000-0000-000000000000"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.000000000"
+      },
+      "device": {
+        "supportedInterfaces": {}
+      }
+    }
+  },
+  "version": "1.0"
+}

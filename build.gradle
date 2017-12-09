@@ -1,0 +1,61 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.M7'
+	}
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url 'http://repo.spring.io/plugins-release' }
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath group: 'org.springframework.build.gradle', name: 'propdeps-plugin', version: '0.0.7'
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version '1.5.9.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'propdeps'
+
+version = springBootVersion
+group = 'org.springframework.boot'
+
+repositories {
+	// NOTE: You should declare only repositories that you need here
+	mavenLocal()
+	mavenCentral()
+	maven { url "http://repo.spring.io/release" }
+	maven { url "http://repo.spring.io/milestone" }
+	maven { url "http://repo.spring.io/snapshot" }
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter")
+	compile("org.springframework.boot:spring-boot-starter-jetty")
+	compile("org.springframework:spring-webmvc")
+	compile("org.hibernate:hibernate-validator:6.0.5.Final")
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+	optional group: 'org.springframework.boot', name:'spring-boot-configuration-processor'
+    optional "org.springframework.boot:spring-boot-configuration-processor"
+	compile 'com.google.maps:google-maps-services:0.2.5'
+    compile group: 'com.amazon.alexa', name: 'alexa-skills-kit', version: '1.8.1'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
+}
+
+configurations.all {
+    exclude module: 'slf4j-log4j12'
+}
+
+compileJava.dependsOn(processResources)

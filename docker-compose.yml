@@ -1,0 +1,13 @@
+version: '3'
+services:
+  java:
+    image: "java:9-jre"
+    command: ["deployment/run.sh"]
+    ports:
+     - "8080:8080"
+     - "8000:8000"
+    volumes:
+     - .:/application:ro
+    user: daemon
+    working_dir: /application
+    restart: unless-stopped

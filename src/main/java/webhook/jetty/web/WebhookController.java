@@ -24,7 +24,7 @@ public class WebhookController {
 	@GetMapping("/")
 	@ResponseBody
 	public String home() {
-		return "Hello world";
+		return "Hello World!";
 	}
 
 	@PostMapping("/alexa")

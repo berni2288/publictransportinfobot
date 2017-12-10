@@ -29,8 +29,10 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'propdeps'
 
-version = springBootVersion
-group = 'org.springframework.boot'
+version = '0.1'
+
+sourceCompatibility = '1.9'
+targetCompatibility = '1.9'
 
 repositories {
 	// NOTE: You should declare only repositories that you need here
